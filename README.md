@@ -4984,28 +4984,47 @@ contains utilities that are functionally broken but remain for legacy reasons.
 
   ```jsx
   // bad
+  import PropTypes from 'prop-types'
   const SFC = ({ foo, bar, children }) => {
-    return <div>{foo}{bar}{children}</div>;
+    return (
+      <div>
+        {foo}
+        {bar}
+        {children}
+      </div>
+    )
   }
   SFC.propTypes = {
     foo: PropTypes.number.isRequired,
     bar: PropTypes.string,
     children: PropTypes.node,
-  };
+  }
 
   // good
-  const SFC = ({ foo, bar, children }) => {
-    return <div>{foo}{bar}{children}</div>;
+  import PropTypes from 'prop-types'
+
+  const SpicyComponent = ({ foo, bar, children }) => {
+    return (
+      <div>
+        {foo}
+        {bar}
+        {children}
+      </div>
+    )
   }
-  SFC.propTypes = {
+
+  SpicyComponent.propTypes = {
     foo: PropTypes.number.isRequired,
     bar: PropTypes.string,
     children: PropTypes.node,
-  };
-  SFC.defaultProps = {
+  }
+
+  SpicyComponent.defaultProps = {
     bar: '',
     children: null,
-  };
+  }
+
+  export default SpicyComponent
   ```
 
 - Avoid spread props as much as you can!
