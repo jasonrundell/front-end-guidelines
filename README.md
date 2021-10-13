@@ -1013,7 +1013,7 @@ as their own .css file. For example from the structure listed above, the final
 compiled output is a `main.css` file.
 - All files should be lowercase and hyphenated.
 - If a file contains multiple variations of a selector, make sure the file is 
-named plurally e.g. `_buttons.scss` and not `_button.scss` since it is 
+named plurally e.g. `buttons.scss` and not `button.scss` since it is 
 unlikely that you will only ever have one button style. Context is important
 for readability and quick comprehension.
 
