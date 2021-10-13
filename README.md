@@ -918,7 +918,7 @@ content to be activated by click or selection.
     /components
       /Button
         index.js
-        Button.module.scss
+        index.module.scss
   ```
 
 - Architecture of files and the order of importing them should follow this 
